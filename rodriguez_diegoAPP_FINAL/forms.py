@@ -15,7 +15,6 @@ class SeminarioForm(forms.ModelForm):
     class Meta:
         model = Seminario
         fields = ('__all__')
-
     ESTADOS = [
         ('Reservado', 'RESERVADO'),
         ('Completada', 'COMPLETADA'),
