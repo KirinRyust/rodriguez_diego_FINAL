@@ -9,7 +9,7 @@
 <body class="container mt-5">
     <div class="alert alert-info display-1 text-center">Agregar Seminarios</div>
         <form method='post'>
-            {{formS}}
+            {{formS.as_p}}
             {% csrf_token %}
             <input type="submit" value="Agregar" class="btn btn-info">
         </form>

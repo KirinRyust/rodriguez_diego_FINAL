@@ -9,7 +9,14 @@ class InstitucionesForm(forms.ModelForm):
         required=True,
         validators=[validators.MaxLengthValidator(80)]
     )
+    direccion = forms.CharField(
+        required=True,
+        validators=[validators.MaxLengthValidator(80)]
+    )
+    email = forms.EmailField(widget=forms.EmailInput)
     nombreInstituciones.widget.attrs['class'] = 'form-control'
+    direccion.widget.attrs['class'] = 'form-control'
+    email.widget.attrs['class'] = 'form-control'
 
 class SeminarioForm(forms.ModelForm):
     class Meta:

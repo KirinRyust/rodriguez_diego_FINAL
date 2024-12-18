@@ -16,6 +16,8 @@
                 <tr>
                     <th>#</th>
                     <th>Nombre Institucion</th>
+                    <th>Direccion Institucion</th>
+                    <th>Email Institucion</th>
                     <th>Opciones API</th>
                 </tr>
             </thead>
@@ -24,6 +26,8 @@
                 <tr>
                     <td>{{ instituciones.id }}</td>
                     <td>{{ instituciones.nombreInstituciones }}</td>
+                    <td>{{ instituciones.direccion }}</td>
+                    <td>{{ instituciones.email }}</td>
                     <td><a href="{% url 'instituciones_detail' pk=instituciones.id %}" class="btn btn-warning btn-sm"><i class="bi bi-pencil"></i></a></td>
                 </tr>
                 {% endfor %}
