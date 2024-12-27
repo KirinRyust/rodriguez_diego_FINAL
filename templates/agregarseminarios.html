@@ -11,6 +11,10 @@
         <form method='post'>
             {{formS.as_p}}
             {% csrf_token %}
+            {{ form.nroPersonas.label }}  {{ form.nroPersonas }}
+            {% for error in form.nroPersonas.errors %}
+            <p style="color: red">{{ error }}</p>
+            {% endfor %}
             <input type="submit" value="Agregar" class="btn btn-info">
         </form>
         <a href="/" class="btn btn-secondary">Volver</a>

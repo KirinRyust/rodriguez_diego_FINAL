@@ -37,7 +37,7 @@ class SeminarioForm(forms.ModelForm):
     nroPersonas = forms.IntegerField(
         required=True,
         validators = [validators.MinValueValidator(1), 
-                      validators.MaxValueValidator(30)]
+                      validators.MaxValueValidator(30)],
     )
     telefono = forms.IntegerField(
         required=True

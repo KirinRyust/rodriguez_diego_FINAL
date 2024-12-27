@@ -17,7 +17,7 @@ def agregarInstituciones(request):
         form = InstitucionesForm(request.POST)
         if form.is_valid():
             form.save()
-        return redirect('/listarInstituciones/')
+            return redirect('/listarInstituciones/')
     data = {'formI' : form}
     return render(request, 'agregarinstituciones.html', data)
 
@@ -32,7 +32,7 @@ def agregarSeminarios(request):
         form = SeminarioForm(request.POST)
         if form.is_valid():
             form.save()
-        return redirect('/listarSeminarios/')
+            return redirect('/listarSeminarios/')
     data = {'formS': form}
     return render(request, 'agregarSeminarios.html', data)
 
